@@ -1,0 +1,48 @@
+.header {
+  background-image: linear-gradient(
+    to right,
+    #65c7f7,
+    #0052d4
+  ); /*헤더창 그라데이션*/
+  color: white; /*글자색*/
+  height: 80px; /*헤더 높이*/
+  margin-bottom: 50px; /*아래 bigbox와의 간격을 위해*/
+  border-bottom-left-radius: 20px; /*좌우 둥글게*/
+  border-bottom-right-radius: 20px;
+  padding: 10px 0px; /*글자 위에서 간격 띄우기 위해*/
+  font-size: 50px; /*글자 크기*/
+  font-family: "Nanum Brush Script", cursive; /*글자 폰트체 끌고옴*/
+} /**/
+
+.header_title {
+  padding-top: 15px; /*글자 위 간격*/
+  padding-left: 10px; /*글자 좌 간격*/
+}
+
+.bigbox {
+  margin: 0px 20%; /*좌우 간격 고정시키기 위해*/
+  align-items: center; /*위치 좌우 가운데로*/
+  margin-top: auto; /*위에 자동*/
+  text-align: center; /*위치 좌우 가운데로*/
+}
+
+.country-box {
+  width: 300px;
+  height: 150px;
+  background-color: royalblue;
+  align-items: center;
+  display: inline-block;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.country-info_info {
+  text-align: start; /*그냥 시작지점에서*/
+  height: 30px;
+  padding: 10px 10px; /*글자 간격*/
+}
+.c-name {
+  padding-top: 20px;
+  font-size: 20px;
+  color: beige;
+}
