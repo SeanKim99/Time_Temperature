@@ -45,4 +45,11 @@
   padding-top: 20px;
   font-size: 20px;
   color: beige;
+  padding-bottom: 0px;
+}
+.c-time {
+  font-size: 40px;
+  color: beige;
+  text-align: start;
+  padding-left: 10px;
 }
