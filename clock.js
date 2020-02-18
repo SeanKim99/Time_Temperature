@@ -19,10 +19,9 @@ function getTime() {
   const seconds = date.getSeconds();
   const lahours = hours - 17;
   const nyhours = hours - 14;
-  const viethours = hours + 2;
+  const viethours = hours - 2;
   const rushours = hours - 6;
-  fixTime(lahours, nyhours, viethours, rushours);
-  setTime(hours, lahours, nyhours, viethours, rushours, minutes, seconds);
+  fixTime(hours, lahours, nyhours, viethours, rushours, minutes, seconds);
   korbackCo(hours);
   labackCo(lahours);
   nybackCo(nyhours);
@@ -81,7 +80,15 @@ function rusbackCo(rushours) {
     russiaColor.style.backgroundImage = "linear-gradient(#00B4DB,#0083B0)";
   }
 }
-function fixTime(lahours, nyhours, viethours, rushours) {
+function fixTime(
+  hours,
+  lahours,
+  nyhours,
+  viethours,
+  rushours,
+  minutes,
+  seconds
+) {
   if (lahours < 0) {
     lahours += 24;
   } else if (lahours >= 24) {
@@ -95,13 +102,14 @@ function fixTime(lahours, nyhours, viethours, rushours) {
   if (viethours < 0) {
     viethours += 24;
   } else if (viethours >= 24) {
-    viethours - +24;
+    viethours -= 24;
   }
   if (rushours < 0) {
     rushours += 24;
   } else if (rushours >= 24) {
-    rushours - +24;
+    rushours -= 24;
   }
+  setTime(hours, lahours, nyhours, viethours, rushours, minutes, seconds);
 }
 function setTime(
   hours,
@@ -121,7 +129,7 @@ function setTime(
   LAInfo.innerText = `${lahours < 10 ? `0${lahours}` : `${lahours}`}:${
     minutes < 10 ? `0${minutes}` : minutes
   }:${seconds < 10 ? `0${seconds}` : seconds}`;
-  NYInfo.innerText = `${nyhours < 10 ? `0${nyhours}` : hours}:${
+  NYInfo.innerText = `${nyhours < 10 ? `0${nyhours}` : nyhours}:${
     minutes < 10 ? `0${minutes}` : minutes
   }:${seconds < 10 ? `0${seconds}` : seconds}`;
   VietnamInfo.innerText = `${viethours < 10 ? `0${viethours}` : viethours}:${
