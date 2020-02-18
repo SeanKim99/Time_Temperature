@@ -97,7 +97,7 @@ function fixTime(
   if (nyhours < 0) {
     nyhours += 24;
   } else if (nyhours >= 24) {
-    nyhours - +24;
+    nyhours -= 24;
   }
   if (viethours < 0) {
     viethours += 24;
